@@ -1,7 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-// const port = process.env.port || 3000;
 
 const app = express();
 
@@ -24,6 +23,9 @@ app.use((req, res, next) => {
   next();
 });
 
+/**
+ * Maintenance mode
+ */
 // app.use((req, res, next) => {
 //   res.render('maintenance.hbs');
 // });
@@ -68,10 +70,7 @@ app.get('/bad', (req, res) => {
   });
 });
 
-// app.listen(process.env.port || 3000, () => {
-//   console.log(`Server is up on port ${this.address().port}`);
-// });
-
+//  @see https://stackoverflow.com/questions/14322989/first-heroku-deploy-failed-error-code-h10
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 })
