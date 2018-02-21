@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <h1>{{pageTitle}}</h1>
-    <p>{{welcomeMessage}}</p>
+  {{> nav}}
 
-  <footer>
-    <p>Copy {{currentYear}}</p>
-  </footer>
+  {{> header}}
+  <p>{{screamIt welcomeMessage}}</p>
+
+  {{> footer}}
 
 </body>
 

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{pageTitle}}</title>
 </head>
-<body>
-  <h1>{{pageTitle}}</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio, repellat officiis, beatae et doloremque nobis perferendis porro explicabo eligendi, voluptas asperiores magni tempora nemo reiciendis illo labore itaque amet.</p>
 
-<footer>
-  <p>Copy {{currentYear}}</p>
-</footer>
+<body>
+  {{> nav}}
+  
+  {{> header}}
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti odio, repellat officiis, beatae et doloremque nobis
+    perferendis porro explicabo eligendi, voluptas asperiores magni tempora nemo reiciendis illo labore itaque amet.</p>
+
+  {{> footer}}
 </body>
+
 </html>
