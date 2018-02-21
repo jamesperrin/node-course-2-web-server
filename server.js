@@ -16,6 +16,9 @@ hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
 
+/**
+ * Home Page
+ */
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page',
@@ -23,13 +26,19 @@ app.get('/', (req, res) => {
   });
 });
 
+/**
+ * About Page
+ */
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
   });
 });
 
-// /bad - send back json with errorMessage
+/**
+ * Bad response
+ * /bad - send back json with errorMessage
+ */
 app.get('/bad', (req, res) => {
   res.send({
     'errorMessage': 'Unable to handle request'
